@@ -1,0 +1,386 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instant Price Calculator — Amego Classique Home Studio | Premium Interior Design Hyderabad</title>
+  <meta name="description" content="Get an instant price estimate for your interior design project with the Amego Classique Home Studio Price Calculator."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="category.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+<header class="site-header" id="site-header">
+  <div class="header-topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="tel:+919885457772"><i class="fas fa-phone-alt"></i> +91 98854 57772</a>
+        <a href="mailto:support@amegohomestudio.com"><i class="fas fa-envelope"></i> support@amegohomestudio.com</a>
+        <span><i class="fas fa-map-marker-alt"></i> Suncity, Hyderabad</span>
+      </div>
+      <div class="topbar-right">
+        <a href="https://www.instagram.com/beautifulhomes_amego_suncity/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61585158387225" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/company/amego-homes-studio/?viewAsMember=true" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.youtube.com/@Amegohomestudio" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <nav class="main-nav" id="main-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="site-logo" aria-label="Amego Classique Home Studio">
+        <img src="Amego Homes Logo.png" alt="Amego Classique Home Studio Logo" class="site-logo-img" />
+      </a>
+            <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="has-mega-menu">
+          <a href="services.html" class="nav-link mega-trigger" id="services-trigger">
+            Services <i class="fas fa-chevron-down mega-arrow"></i>
+          </a>
+          <div class="mega-menu" id="mega-menu" role="menu">
+            <div class="mega-menu-inner">
+              <div class="mega-col" id="mega-col-1"></div>
+              <div class="mega-col" id="mega-col-2"></div>
+              <div class="mega-col" id="mega-col-3"></div>
+              <div class="mega-promo">
+                <img src="hero_interior.png" alt="Amego Classique Home Studio" loading="lazy"/>
+                <div class="mega-promo-text">
+                  <strong>Free Design Consultation</strong>
+                  <p>Our expert visits your home within 24 hours.</p>
+                  <a href="contact.html" class="btn btn-primary btn-sm">Book Free Visit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="calculator.html" class="nav-link">Price Calculator</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="process.html" class="nav-link">Process</a></li>
+        <li class="has-mega-menu">
+          <a href="partners.html" class="nav-link mega-trigger" id="partners-trigger">
+            Business Partners <i class="fas fa-chevron-down mega-arrow"></i>
+          </a>
+          <div class="mega-menu" id="partners-mega-menu" role="menu">
+            <div class="mega-partners-logos" style="padding: 1.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                <a href="category.html?page=sleek-kitchens" class="mp-logo" title="Sleek Kitchens"><img src="logos folder/sleek logo (1).png" alt="Sleek"></a>
+                <a href="category.html?page=bathsense" class="mp-logo" title="Bathsense"><img src="logos folder/bathsense.png" alt="Bathsense"></a>
+                <a href="category.html?page=the-white-teak-company" class="mp-logo" title="The White Teak Company"><img src="logos folder/the ehite t6eak company.png" alt="White Teak"></a>
+                <a href="category.html?page=nilaya" class="mp-logo" title="Nilaya"><img src="logos folder/nilaya.png" alt="Nilaya"></a>
+                <a href="category.html?page=ador" class="mp-logo" title="Ador"><img src="logos folder/ador.png" alt="Ador"></a>
+                <a href="category.html?page=hafele" class="mp-logo" title="Häfele"><img src="logos folder/hafele.png" alt="Häfele"></a>
+                <a href="category.html?page=weatherseal" class="mp-logo" title="Weatherseal"><img src="logos folder/weather seal.png" alt="Weatherseal"></a>
+                <a href="category.html?page=pure-royale" class="mp-logo" title="Pure Royale"><img src="logos folder/pure.png" alt="Pure Royale"></a>
+                <a href="category.html?page=action-tesa" class="mp-logo" title="Action Tesa"><img src="logos folder/action tesa.png" alt="Action Tesa"></a>
+            </div>
+          </div>
+        </li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary nav-cta">Book Free Consultation</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header><div style="height:90px;"></div><section class="section calc-section" id="calculator">
+  <div class="calc-section-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-tag">Hyderabad Market Rates</span>
+      <h2 class="section-title">Instant Price <em>Calculator</em></h2>
+      <p class="section-sub">Get a ballpark cost in seconds. Our expert will refine it during your free consultation.</p>
+    </div>
+
+    <div class="calc-wrapper" data-aos="fade-up">
+      <!-- Calculator Tabs -->
+      <div class="calc-tabs" role="tablist" aria-label="Price calculator categories">
+        <button class="calc-tab active" role="tab" aria-selected="true" data-calc="full-home" id="tab-full-home">
+          <i class="fas fa-home"></i> Full Home
+        </button>
+        <button class="calc-tab" role="tab" aria-selected="false" data-calc="kitchen" id="tab-kitchen">
+          <i class="fas fa-utensils"></i> Kitchen
+        </button>
+        <button class="calc-tab" role="tab" aria-selected="false" data-calc="wardrobe" id="tab-wardrobe">
+          <i class="fas fa-door-closed"></i> Wardrobe
+        </button>
+        <button class="calc-tab" role="tab" aria-selected="false" data-calc="bathroom" id="tab-bathroom">
+          <i class="fas fa-bath"></i> Bathroom
+        </button>
+      </div>
+
+      <div class="calc-body">
+        <!-- Full Home Calculator -->
+        <div class="calc-panel active" id="calc-full-home" role="tabpanel" aria-labelledby="tab-full-home">
+          <div class="calc-left">
+            <h3><i class="fas fa-home"></i> Full Home Interiors Calculator</h3>
+            
+            <div class="calc-input-group">
+              <label for="fh-area">Home Area (sq. ft.)</label>
+              <div class="input-with-unit">
+                <input type="number" id="fh-area" placeholder="e.g. 1000" min="200" max="10000" value="1000"/>
+                <span class="unit">sq. ft.</span>
+              </div>
+              <div class="range-hints">
+                <button class="range-hint" data-val="600" data-target="fh-area">600</button>
+                <button class="range-hint" data-val="1000" data-target="fh-area">1000</button>
+                <button class="range-hint" data-val="1500" data-target="fh-area">1500</button>
+                <button class="range-hint" data-val="2000" data-target="fh-area">2000</button>
+              </div>
+            </div>
+            <div class="scope-checkboxes">
+              <p>Include rooms:</p>
+              <div class="scope-grid">
+                <label class="scope-item"><input type="checkbox" checked value="kitchen"> Kitchen</label>
+                <label class="scope-item"><input type="checkbox" checked value="living"> Living Room</label>
+                <label class="scope-item"><input type="checkbox" checked value="master"> Master Bedroom</label>
+                <label class="scope-item"><input type="checkbox" value="bed2"> Bedroom 2</label>
+                <label class="scope-item"><input type="checkbox" value="bed3"> Bedroom 3</label>
+                <label class="scope-item"><input type="checkbox" value="bathroom"> Bathroom</label>
+                <label class="scope-item"><input type="checkbox" value="balcony"> Balcony</label>
+                <label class="scope-item"><input type="checkbox" value="study"> Study/Office</label>
+              </div>
+            </div>
+          </div>
+          <div class="calc-right">
+            <div class="calc-result-card">
+              <div class="result-label">Estimated Cost</div>
+              <div class="result-amount" id="fh-result">₹18,00,000</div>
+              <div class="result-range" id="fh-range">Range: ₹16L – ₹22L</div>
+              <div class="result-breakdown" id="fh-breakdown">
+                <div class="breakdown-item"><span>Basic</span><span id="fh-basic">₹14,40,000</span></div>
+                <div class="breakdown-item"><span>Premium</span><span id="fh-premium">₹18,00,000</span></div>
+                <div class="breakdown-item"><span>Luxe</span><span id="fh-luxe">₹22,00,000</span></div>
+              </div>
+              <a href="#estimate" class="btn btn-primary btn-full calc-cta">Get Free Estimate</a>
+              <a href="https://wa.me/919885457772?text=Hi!%20I%20need%20a%20quote%20for%20Full%20Home%20Interiors." target="_blank" class="btn btn-whatsapp btn-full" style="margin-top:8px">
+                <i class="fab fa-whatsapp"></i> WhatsApp This Quote
+              </a>
+            </div>
+            <p class="calc-disclaimer">*Estimate based on Hyderabad market standard rates. Actual cost may vary based on materials &amp; design complexity.</p>
+          </div>
+        </div>
+
+        <!-- Kitchen Calculator -->
+        <div class="calc-panel" id="calc-kitchen" role="tabpanel" aria-labelledby="tab-kitchen">
+          <div class="calc-left">
+            <h3><i class="fas fa-utensils"></i> Modular Kitchen Calculator</h3>
+            
+            <div class="calc-input-group">
+              <label for="kt-length">Kitchen Length (running ft.)</label>
+              <div class="input-with-unit">
+                <input type="number" id="kt-length" placeholder="e.g. 12" min="4" max="40" value="12"/>
+                <span class="unit">ft.</span>
+              </div>
+              <div class="range-hints">
+                <button class="range-hint" data-val="8" data-target="kt-length">8 ft.</button>
+                <button class="range-hint" data-val="12" data-target="kt-length">12 ft.</button>
+                <button class="range-hint" data-val="16" data-target="kt-length">16 ft.</button>
+                <button class="range-hint" data-val="20" data-target="kt-length">20 ft.</button>
+              </div>
+            </div>
+            <div class="kitchen-layout">
+              <p>Kitchen Layout:</p>
+              <div class="layout-options">
+                <label class="layout-opt"><input type="radio" name="layout" value="straight" checked> Straight</label>
+                <label class="layout-opt"><input type="radio" name="layout" value="l-shape"> L-Shape</label>
+                <label class="layout-opt"><input type="radio" name="layout" value="parallel"> Parallel</label>
+                <label class="layout-opt"><input type="radio" name="layout" value="island"> Island</label>
+              </div>
+            </div>
+          </div>
+          <div class="calc-right">
+            <div class="calc-result-card">
+              <div class="result-label">Estimated Cost</div>
+              <div class="result-amount" id="kt-result">₹30,000</div>
+              <div class="result-range" id="kt-range">Range: ₹25,000 – ₹40,000</div>
+              <div class="result-breakdown">
+                <div class="breakdown-item"><span>Basic Finish</span><span id="kt-basic">₹25,000</span></div>
+                <div class="breakdown-item"><span>Premium Finish</span><span id="kt-premium">₹30,000</span></div>
+                <div class="breakdown-item"><span>Luxe Finish</span><span id="kt-luxe">₹40,000</span></div>
+              </div>
+              <a href="#estimate" class="btn btn-primary btn-full calc-cta">Get Free Estimate</a>
+              <a href="https://wa.me/919885457772?text=Hi!%20I%20need%20a%20quote%20for%20Modular%20Kitchen." target="_blank" class="btn btn-whatsapp btn-full" style="margin-top:8px">
+                <i class="fab fa-whatsapp"></i> WhatsApp This Quote
+              </a>
+            </div>
+            <p class="calc-disclaimer">*Estimate for basic finish. Premium hardware &amp; appliances priced separately.</p>
+          </div>
+        </div>
+
+        <!-- Wardrobe Calculator -->
+        <div class="calc-panel" id="calc-wardrobe" role="tabpanel" aria-labelledby="tab-wardrobe">
+          <div class="calc-left">
+            <h3><i class="fas fa-door-closed"></i> Wardrobe Calculator</h3>
+            
+            <div class="calc-input-group">
+              <label for="wd-length">Wardrobe Length (running ft.)</label>
+              <div class="input-with-unit">
+                <input type="number" id="wd-length" placeholder="e.g. 10" min="3" max="30" value="10"/>
+                <span class="unit">ft.</span>
+              </div>
+              <div class="range-hints">
+                <button class="range-hint" data-val="6" data-target="wd-length">6 ft.</button>
+                <button class="range-hint" data-val="8" data-target="wd-length">8 ft.</button>
+                <button class="range-hint" data-val="10" data-target="wd-length">10 ft.</button>
+                <button class="range-hint" data-val="14" data-target="wd-length">14 ft.</button>
+              </div>
+            </div>
+            <div class="wardrobe-type">
+              <p>Door Type:</p>
+              <div class="layout-options">
+                <label class="layout-opt"><input type="radio" name="wdtype" value="sliding" checked> Sliding</label>
+                <label class="layout-opt"><input type="radio" name="wdtype" value="swing"> Swing</label>
+                <label class="layout-opt"><input type="radio" name="wdtype" value="folding"> Folding</label>
+              </div>
+            </div>
+          </div>
+          <div class="calc-right">
+            <div class="calc-result-card">
+              <div class="result-label">Estimated Cost</div>
+              <div class="result-amount" id="wd-result">₹22,000</div>
+              <div class="result-range" id="wd-range">Range: ₹18,000 – ₹30,000</div>
+              <div class="result-breakdown">
+                <div class="breakdown-item"><span>Basic</span><span id="wd-basic">₹18,000</span></div>
+                <div class="breakdown-item"><span>Premium</span><span id="wd-premium">₹22,000</span></div>
+                <div class="breakdown-item"><span>Luxe</span><span id="wd-luxe">₹30,000</span></div>
+              </div>
+              <a href="#estimate" class="btn btn-primary btn-full calc-cta">Get Free Estimate</a>
+              <a href="https://wa.me/919885457772?text=Hi!%20I%20need%20a%20quote%20for%20Wardrobe%20Design." target="_blank" class="btn btn-whatsapp btn-full" style="margin-top:8px">
+                <i class="fab fa-whatsapp"></i> WhatsApp This Quote
+              </a>
+            </div>
+            <p class="calc-disclaimer">*Rate for laminate finish. Mirror shutters, PU finish &amp; accessories charged extra.</p>
+          </div>
+        </div>
+
+        <!-- Bathroom Calculator -->
+        <div class="calc-panel" id="calc-bathroom" role="tabpanel" aria-labelledby="tab-bathroom">
+          <div class="calc-left">
+            <h3><i class="fas fa-bath"></i> Bathroom Calculator</h3>
+            
+            <div class="calc-input-group">
+              <label for="bt-count">Number of Bathrooms</label>
+              <div class="bt-counter">
+                <button type="button" class="counter-btn minus" data-target="bt-count">−</button>
+                <input type="number" id="bt-count" value="2" min="1" max="8" readonly/>
+                <button type="button" class="counter-btn plus" data-target="bt-count">+</button>
+              </div>
+            </div>
+            <div class="bathroom-finish">
+              <p>Finish Level:</p>
+              <div class="layout-options">
+                <label class="layout-opt"><input type="radio" name="btfinish" value="standard"> Standard</label>
+                <label class="layout-opt"><input type="radio" name="btfinish" value="premium" checked> Premium</label>
+                <label class="layout-opt"><input type="radio" name="btfinish" value="luxe"> Luxe</label>
+              </div>
+            </div>
+          </div>
+          <div class="calc-right">
+            <div class="calc-result-card">
+              <div class="result-label">Estimated Cost</div>
+              <div class="result-amount" id="bt-result">₹2,40,000</div>
+              <div class="result-range" id="bt-range">For 2 bathrooms · ₹1,20,000 each</div>
+              <div class="result-breakdown">
+                <div class="breakdown-item"><span>Standard</span><span id="bt-standard">₹1,80,000</span></div>
+                <div class="breakdown-item"><span>Premium</span><span id="bt-premium">₹2,40,000</span></div>
+                <div class="breakdown-item"><span>Luxe</span><span id="bt-luxe">₹3,20,000</span></div>
+              </div>
+              <a href="#estimate" class="btn btn-primary btn-full calc-cta">Get Free Estimate</a>
+              <a href="https://wa.me/919885457772?text=Hi!%20I%20need%20a%20quote%20for%20Bathroom%20Design." target="_blank" class="btn btn-whatsapp btn-full" style="margin-top:8px">
+                <i class="fab fa-whatsapp"></i> WhatsApp This Quote
+              </a>
+            </div>
+            <p class="calc-disclaimer">*Includes tiles, fittings, vanity &amp; waterproofing. Luxury fixtures &amp; freestanding tubs priced separately.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap" style="background:#fff; padding:10px 15px; border-radius:8px; display:inline-block; margin-bottom:1rem;">
+            <img src="Amego Homes Logo.png" alt="Amego Classique Home Studio Logo" style="height: 40px; width: auto;" />
+          </div>
+          <p>Hyderabad's trusted premium interior design studio. Authorized Asian Paints Beautiful Homes partner serving Suncity and all of Hyderabad.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/beautifulhomes_amego_suncity/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61585158387225" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/amego-homes-studio/?viewAsMember=true" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/@Amegohomestudio" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/919885457772" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="services.html">Modular Kitchens</a></li>
+            <li><a href="services.html">Full Home Interiors</a></li>
+            <li><a href="services.html">Wardrobes</a></li>
+            <li><a href="services.html">Living Room Solutions</a></li>
+            <li><a href="services.html">False Ceiling &amp; Lighting</a></li>
+            <li><a href="services.html">Bathroom Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="portfolio.html">Our Portfolio</a></li>
+            <li><a href="calculator.html">Price Calculator</a></li>
+            <li><a href="process.html">How It Works</a></li>
+            <li><a href="contact.html">Free Estimate</a></li>
+            <li><a href="reviews.html">Client Reviews</a></li>
+            <li><a href="partners.html">Our Partners</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact-col">
+          <h5>Contact</h5>
+          <p><i class="fas fa-map-marker-alt"></i> Suncity, Hyderabad – 500100</p>
+          <p><i class="fas fa-phone-alt"></i> <a href="tel:+919885457772">+91 98854 57772</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:support@amegohomestudio.com">support@amegohomestudio.com</a></p>
+          <p><i class="fas fa-clock"></i> Mon–Sat: 10 AM – 7 PM</p>
+          <div class="ap-footer-badge">
+            <i class="fas fa-certificate"></i>
+            <div><strong>Asian Paints Authorized</strong><span>Beautiful Homes Studio</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 Amego Classique Home Studio. All rights reserved. Premium Interior Design in Hyderabad.</p>
+      <p>Designed and developed by <a href="https://creativals.com" target="_blank" style="color: var(--gold); text-decoration: none; font-weight: 600;">creativals.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919885457772?text=Hi!%20I'm%20interested%20in%20interior%20design%20services." target="_blank" class="wa-float" id="wa-float" aria-label="WhatsApp Us">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tooltip">Chat with us!</span>
+</a>
+
+<!-- Back to Top -->
+<button class="back-top" id="back-top" aria-label="Back to top" title="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="categories-data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
+
+
+
+
