@@ -260,6 +260,9 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   z-index: 1000;
   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
+.site-header .container {
+  max-width: 1440px;
+}
 .main-nav {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
@@ -368,6 +371,21 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   border-radius: 9px;
   font-weight: 700;
   letter-spacing: 0.01em;
+}
+
+/* Responsive Nav Shrink for small laptops before mobile menu */
+@media (max-width: 1360px) {
+  .nav-inner { gap: 0.5rem; }
+  .nav-link { padding: 0.5rem 0.6rem; font-size: 0.82rem; }
+  .nav-cta { padding: 0.5rem 0.8rem; font-size: 0.8rem; }
+  .site-logo-img { height: 40px; }
+}
+
+@media (max-width: 1060px) {
+  .nav-inner { padding: 0 1rem; }
+  .nav-link { padding: 0.4rem 0.4rem; font-size: 0.78rem; }
+  .nav-cta { padding: 0.5rem 0.6rem; font-size: 0.78rem; }
+  .site-logo-img { height: 36px; }
 }
 
 /* Hamburger */
