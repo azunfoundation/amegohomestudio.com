@@ -144,27 +144,34 @@
 .mp-logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 5px 10px;
-  border-radius: 6px;
-  border: 1px solid transparent;
+  justify-content: flex-start;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--light-2, #fafafa);
   transition: all 0.2s ease;
   flex-shrink: 0;
-  opacity: 0.7;
+  opacity: 1;
+  gap: 12px;
+  text-decoration: none;
 }
 .mp-logo:hover {
-  border-color: var(--border);
+  border-color: var(--orange, #e8471c);
   background: #fff;
-  opacity: 1;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 .mp-logo img {
-  height: 38px;
+  height: 32px;
   width: auto;
-  max-width: 110px;
+  max-width: 50px;
   object-fit: contain;
   display: block;
+}
+.mp-logo .mp-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark, #222);
 }
 
 /* Mobile mega menu adaptation moved to bottom RESPONSIVE section */
@@ -454,35 +461,26 @@
     box-shadow: none;
     border-radius: 0;
     border: none;
-    display: none; /* hidden by default on mobile */
+    display: none;
     padding: 0;
     background: transparent;
-    overflow: hidden;
+    overflow: visible;
   }
-  .has-mega-menu.active .mega-menu {
-    display: block !important;
-  }
-  .has-mega-menu:hover .mega-menu {
-    display: none; /* disable hover on mobile */
-  }
-  .has-mega-menu.active:hover .mega-menu {
-    display: block !important; /* unless it's explicitly active */
-  }
-  
+  .has-mega-menu.active .mega-menu { display: block !important; transform: none !important; }
+  .has-mega-menu:hover .mega-menu { display: none; }
   .mega-menu-inner {
     display: flex !important;
     flex-direction: column !important;
-    padding: 0;
+    grid-template-columns: unset !important;
+    padding: 0.25rem 0;
     gap: 0;
     width: 100%;
   }
   .mega-col {
-    display: flex !important;
-    flex-direction: column !important;
+    display: block !important;
     border: none !important;
     padding: 0 !important;
     width: 100% !important;
-    flex-shrink: 0;
   }
   .mega-col-title {
     display: block !important;
@@ -491,7 +489,7 @@
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--orange);
-    padding: 1.2rem 1rem 0.3rem;
+    padding: 0.85rem 1rem 0.3rem;
     border-bottom: none;
     margin-bottom: 0;
     background: none;

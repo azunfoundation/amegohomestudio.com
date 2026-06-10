@@ -107,14 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.classList.toggle('open', open);
     hamburger.setAttribute('aria-expanded', open);
     document.body.style.overflow = open ? 'hidden' : '';
-    if (open) {
-      // Always start at top of nav so Kitchen & Storage is reachable
-      navLinks.scrollTop = 0;
-    }
-    if (open) {
-      navLinks.scrollTop = 0;
-    }
+    // Hide services dropdown when closing the nav
     if (!open) {
+      const msl = $('#mobile-services-list');
+      if (msl) msl.style.display = 'none';
       megaParent?.classList.remove('active');
     }
   });
@@ -126,18 +122,61 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks?.classList.remove('open');
       hamburger?.setAttribute('aria-expanded', false);
       document.body.style.overflow = '';
+      const msl = $('#mobile-services-list');
+      if (msl) msl.style.display = 'none';
       megaParent?.classList.remove('active');
     });
   });
 
-  // ── Mobile Services Dropdown (CSS Driven) ───────
+  // ── Mobile Services Flat Dropdown ─────────────────
+  // Builds a simple flat <li> list independent of desktop mega-menu CSS.
+  function buildMobileServicesDropdown() {
+    if (typeof NAV_MENU === 'undefined') return;
+    if ($('#mobile-services-list')) return; // already built
+
+    const wrapper = document.createElement('li');
+    wrapper.id = 'mobile-services-list';
+    wrapper.className = 'mobile-services-list';
+
+    const colTitles = ['Kitchen & Storage', 'Rooms & Spaces', 'Finishing & Decor'];
+    NAV_MENU.forEach((col, idx) => {
+      const label = document.createElement('div');
+      label.className = 'mobile-services-label';
+      label.textContent = colTitles[idx];
+      wrapper.appendChild(label);
+
+      col.items.forEach(item => {
+        const a = document.createElement('a');
+        a.href = `category.html?page=${item.slug}`;
+        a.className = 'mobile-services-item';
+        a.textContent = item.label;
+        a.addEventListener('click', () => {
+          hamburger?.classList.remove('open');
+          navLinks?.classList.remove('open');
+          hamburger?.setAttribute('aria-expanded', false);
+          document.body.style.overflow = '';
+          wrapper.style.display = 'none';
+          megaParent?.classList.remove('active');
+        });
+        wrapper.appendChild(a);
+      });
+    });
+
+    // Insert as a <li> sibling directly after the Services <li>
+    megaParent?.insertAdjacentElement('afterend', wrapper);
+    wrapper.style.display = 'none';
+  }
+
+  // Services trigger: on mobile show flat dropdown, on desktop allow hover
   megaTrigger?.addEventListener('click', e => {
     if (window.innerWidth <= 768) {
       e.preventDefault();
-      megaParent?.classList.toggle('active');
-      if (megaParent?.classList.contains('active') && navLinks) {
-        requestAnimationFrame(() => navLinks.scrollTop = 0);
-      }
+      buildMobileServicesDropdown();
+      const msl = $('#mobile-services-list');
+      if (!msl) return;
+      const isOpen = msl.style.display === 'block';
+      msl.style.display = isOpen ? 'none' : 'block';
+      megaParent.classList.toggle('active', !isOpen);
     }
   });
 
@@ -149,6 +188,8 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.classList.remove('open');
       hamburger?.setAttribute('aria-expanded', false);
       document.body.style.overflow = '';
+      const msl = $('#mobile-services-list');
+      if (msl) msl.style.display = 'none';
       megaParent?.classList.remove('active');
     }
   });
