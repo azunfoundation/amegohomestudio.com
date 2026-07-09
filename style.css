@@ -196,7 +196,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   margin-bottom: 1.2rem;
 }
 .section-tag--light {
-  color: #111;
+  color: #ffffff;
   border-color: rgba(255,255,255,0.25);
   background: rgba(255,255,255,0.08);
 }
@@ -424,24 +424,43 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 /* ── Cinematic Background ─────────────────────────── */
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
+  overflow: hidden;
   will-change: transform;
 }
-.hero-bg-img {
-  width: 100%; height: 100%;
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: center 30%;
-  transform: scale(1.08);
-  animation: heroZoom 24s ease-in-out infinite alternate;
-  transition: transform 0.1s linear;
+  object-position: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
 }
-@keyframes heroZoom {
-  from { transform: scale(1.08); }
-  to   { transform: scale(1.02); }
+.hero-bg-video.active {
+  opacity: 1;
+}
+/* Hide the old static image if it somehow appears */
+.hero-bg-img {
+  display: none;
 }
 
-/* Multi-layer cinematic overlay — warm amber at bottom, deep dark at top */
+
+/* Subtle dark overlay — masks low-res video artifacts, improves text readability */
 .hero-cinematic-overlay {
-  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.30) 0%,
+    rgba(0, 0, 0, 0.18) 40%,
+    rgba(0, 0, 0, 0.18) 60%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  pointer-events: none;
 }
 
 /* Vignette edges */
@@ -451,12 +470,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 
 /* ── Floating Ambient Light Orbs ─────────────────── */
 .hero-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  pointer-events: none;
-  z-index: 0;
-  animation: orbFloat 12s ease-in-out infinite alternate;
+  display: none;
 }
 .hero-orb--1 {
   width: 480px; height: 480px;
@@ -485,33 +499,12 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 
 /* ── Luxury Grid Accent ──────────────────────────── */
 .hero-grid-accent {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background-image:
-    linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: linear-gradient(135deg, transparent 0%, black 30%, black 70%, transparent 100%);
-  -webkit-mask-image: linear-gradient(135deg, transparent 0%, black 30%, black 70%, transparent 100%);
-  pointer-events: none;
+  display: none;
 }
 
 /* ── Horizontal light streak ─────────────────────── */
 .hero-line-accent {
-  position: absolute;
-  left: 0; right: 0;
-  top: 55%;
-  height: 1px;
-  background: linear-gradient(90deg,
-    transparent 0%,
-    rgba(0,0,0,0.05) 30%,
-    rgba(0,0,0,0.08) 50%,
-    rgba(0,0,0,0.05) 70%,
-    transparent 100%);
-  z-index: 0;
-  pointer-events: none;
-  animation: lineShimmer 6s ease-in-out infinite alternate;
+  display: none;
 }
 @keyframes lineShimmer {
   from { opacity: 0.4; transform: scaleX(0.8); }
@@ -2064,7 +2057,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .comparison-card h4 {
   padding: 1.3rem 1.6rem;
   font-size: 1.0rem;
-  color: #111;
+  color: #ffffff;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   font-family: var(--font-head);
   background: rgba(255,255,255,0.04);
@@ -2089,7 +2082,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   letter-spacing: 0.08em;
   color: rgba(255,255,255,0.38);
 }
-.comp-row span:first-child { color: #555; }
+.comp-row span:first-child { color: rgba(255,255,255,0.7); }
 .col-amego {
   color: #4ade80;
   display: flex; align-items: center; gap: 3px;
@@ -2358,7 +2351,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   background-clip: text;
   filter: drop-shadow(0 2px 14px rgba(232,71,28,0.4));
 }
-.cta-sub { color: #333; font-size: 1.05rem; margin-bottom: 2.2rem; line-height: 1.75; }
+.cta-sub { color: rgba(255, 255, 255, 0.75); font-size: 1.05rem; margin-bottom: 2.2rem; line-height: 1.75; }
 .cta-btns { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 1.4rem; }
 .cta-note {
   font-size: 0.78rem;
@@ -2399,8 +2392,9 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .contact-social a {
   width: 42px; height: 42px;
   border-radius: 50%;
-  background: var(--dark-2);
-  color: #555;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  color: var(--mid);
   display: flex; align-items: center; justify-content: center;
   font-size: 0.9rem;
   transition: all var(--dur);

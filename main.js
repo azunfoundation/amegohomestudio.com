@@ -251,6 +251,42 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   initHeroAnimations();
 
+  /* ─── HERO VIDEO CAROUSEL ─────────────────────────── */
+  (function initHeroVideoCarousel() {
+    const videos = document.querySelectorAll('.hero-bg-video');
+    if (!videos.length) return;
+
+    const DISPLAY_DURATION = 5000; // 5 seconds per video
+    let currentIndex = 0;
+
+    // Start the first video
+    videos[0].play().catch(() => {});
+
+    function switchToNext() {
+      const current = videos[currentIndex];
+      const nextIndex = (currentIndex + 1) % videos.length;
+      const next = videos[nextIndex];
+
+      // Start playing next video before fading in
+      next.currentTime = 0;
+      next.play().catch(() => {});
+
+      // Crossfade: fade out current, fade in next
+      current.classList.remove('active');
+      next.classList.add('active');
+
+      // Pause the old video after the CSS transition completes
+      setTimeout(() => {
+        current.pause();
+        current.currentTime = 0;
+      }, 1200);
+
+      currentIndex = nextIndex;
+    }
+
+    setInterval(switchToNext, DISPLAY_DURATION);
+  })();
+
   /* ─── HERO MOUSE PARALLAX ────────────────────────── */
   const heroBg = $('#hero-parallax-bg');
   const heroSection = $('#hero');
